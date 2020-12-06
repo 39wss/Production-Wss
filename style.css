@@ -42,6 +42,7 @@ h1 {
 }
 h2 {
   font-size: var(--font-medium);
+  font-weight: var(--weight-regular);
 }
 button {
   background: transparent;
@@ -62,9 +63,15 @@ button {
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
+  transition: all var(--annimation-duration);
+}
+#navbar.navbar--dark {
+  background: var(--color-white);
+  color: var(--color-black);
 }
 .logo {
-  font-size: var(--font-medium);
+  font-size: 24px;
+  font-weight: var(--weight-bold);
 }
 #nav {
   display: flex;
@@ -139,6 +146,64 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10rem;
+}
+#inpo img {
+  width: 350px;
+}
+.inpo__txt {
+  width: 450px;
+}
+.inpo__txt_p {
+  margin: 1.5rem 0;
+}
+.inpo__list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.inpo__list li span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--color-white);
+  margin-right: 1rem;
+}
+.span__1 {
+  background: #d5e5fc;
+}
+.span__2 {
+  background: #bcd5fc;
+}
+.span__3 {
+  background: #9bc1fc;
+}
+.inpo__list li p {
+  width: 300px;
+  display: inline-block;
+}
+/*Talk*/
+.talk__txt {
+  width: 380px;
+}
+.talk__txt p {
+  margin: 2rem 0;
+  line-height: 24px;
+}
+.talk__txt button {
+  width: 9rem;
+  height: 3rem;
+  background: var(--color-sky);
+  border-width: 4px 8px;
+  border-radius: 50px;
+  color: var(--color-white);
+  font-size: var(--font-regular);
+}
+#talk img {
+  width: 550px;
 }
 /*Review*/
 #review {
@@ -146,26 +211,242 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10rem;
 }
 .review__ul {
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.review__list {
+  width: 300px;
+  border-radius: 24px;
+  box-shadow: 0px 5px 5px 5px var(--color-shadow);
 }
 .user__inpo {
   display: flex;
   align-items: center;
 }
+.user__inpo img {
+  width: 90px;
+  height: 90px;
+}
+.user__say {
+  padding: 0 1.5rem 1rem;
+  font-size: var(--font-small);
+}
 /*Start*/
 #start {
+  width: 100%;
+  padding: 5rem 25rem;
   text-align: center;
+  background-color: rgb(56, 56, 56);
+  color: var(--color-white);
+  margin-bottom: 10rem;
+}
+#start p {
+  margin: 1.5rem 0;
+}
+#start button {
+  width: 8rem;
+  height: 2rem;
+  background: linear-gradient(45deg, var(--color-sky), var(--color-blue));
+  color: var(--color-white);
 }
 /*Footer*/
 #footer {
   width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
   display: flex;
   justify-content: space-between;
+  background-color: var(--color-light-white);
+}
+.company h3 {
+  font-size: 24px;
+}
+.company p {
+  width: 400px;
+  margin-top: 1rem;
 }
 .footer__list {
   display: flex;
+}
+.footer__ul {
+  margin-right: 2.5rem;
+}
+.footer__ul li {
+  margin-top: 1rem;
+}
+/*Mobile*/
+@media all and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 32px;
+    --font-medium: 28px;
+    --font-regular: 16px;
+    --font-small: 10px;
+    --font-micro: 8px;
+  }
+  /*Universal tags*/
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-regular);
+  }
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-regular);
+  }
+  .section {
+    padding: 0px 40px;
+    margin: auto;
+  }
+  /*Navbar*/
+  #navbar {
+    padding: 25px 30px;
+  }
+  #navbar.navbar--dark {
+    background: var(--color-white);
+    color: var(--color-black);
+  }
+  #nav {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    padding: 2rem 1rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  #nav.open {
+    display: flex;
+  }
+  .navbar__bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.795);
+  }
+  .navbar__bg.open {
+    display: block;
+  }
+  #nav li {
+    margin-bottom: 20px;
+  }
+  .toggle__btn {
+    width: 25px;
+    display: block;
+  }
+  .toggle__btn img {
+    width: 100%;
+  }
+  /*Home*/
+  #home {
+    padding-top: 40%;
+    align-items: flex-start;
+  }
+  .main__img {
+    position: absolute;
+    top: 80%;
+    right: 25px;
+    width: 250px;
+  }
+  /*Opening Inpo*/
+  #opening {
+    flex-direction: column;
+    padding: 5rem 0;
+  }
+  .open__list {
+    width: 70%;
+    height: 160px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2rem 20px;
+    padding: 1.5rem;
+  }
+  .open__txt {
+    width: 60%;
+  }
+  /*Inpo*/
+  #inpo,
+  #talk {
+    flex-direction: column;
+    align-items: center;
+  }
+  #inpo img,
+  #talk img {
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+  .inpo__txt {
+    width: 400px;
+  }
+  .inpo__txt h2,
+  .inpo__txt_p {
+    text-align: center;
+  }
+  .inpo__list li {
+    justify-content: center;
+  }
+  /*Talk*/
+  #talk {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .talk__txt button {
+    width: 7rem;
+    height: 2rem;
+  }
+  #talk img {
+    width: 350px;
+  }
+  /*Review*/
+  #review {
+    flex-direction: column;
+  }
+  .review__ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review__list {
+    width: 80%;
+    margin-bottom: 2.5rem;
+    padding-top: 0.5rem;
+  }
+  .user__inpo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 1rem;
+  }
+  /*Start*/
+  #start {
+    padding: 5rem 30px;
+  }
+  /*Footer*/
+  #footer {
+    flex-direction: column;
+  }
+  .company p {
+    width: 400px;
+    margin-top: 1rem;
+  }
+  .footer__list {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .footer__ul h3 {
+    font-size: var(--font-regular);
+  }
+  .footer__ul li {
+    margin-top: 0.5rem;
+    font-size: 12px;
+  }
 }
