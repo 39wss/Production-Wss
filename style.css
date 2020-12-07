@@ -108,7 +108,7 @@ button {
   font-size: var(--font-regular);
 }
 .main__img {
-  width: 500px;
+  width: 480px;
 }
 /*Opening Inpo*/
 #opening {
@@ -305,6 +305,7 @@ button {
   }
   /*Navbar*/
   #navbar {
+    z-index: 1;
     padding: 25px 30px;
   }
   #navbar.navbar--dark {
@@ -312,7 +313,7 @@ button {
     color: var(--color-black);
   }
   #nav {
-    display: none;
+    display: flex;
     position: absolute;
     flex-direction: column;
     top: 0px;
@@ -322,31 +323,63 @@ button {
     padding: 2rem 1rem;
     background-color: var(--color-white);
     color: var(--color-black);
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
   }
-  #nav.open {
-    display: flex;
+  #nav.nav-active {
+    transform: translateX(0%);
   }
-  .navbar__bg {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.795);
-  }
-  .navbar__bg.open {
+  #nav.toggle {
     display: block;
   }
   #nav li {
+    opacity: 0;
     margin-bottom: 20px;
   }
   .toggle__btn {
+    position: relative;
+    z-index: 1;
     width: 25px;
+    height: 25px;
     display: block;
   }
-  .toggle__btn img {
-    width: 100%;
+  .toggle__btn div {
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: var(--color-white);
+    transition: all 300ms;
+  }
+  .toggle__btn_top.navbar--dark {
+    background: var(--color-black);
+  }
+  .toggle__btn_bottom.navbar--dark {
+    background: var(--color-black);
+  }
+  .toggle__btn_top {
+    top: 5px;
+  }
+  .toggle__btn_bottom {
+    top: 15px;
+  }
+  .toggleAnimation .toggle__btn_top {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .toggleAnimation .toggle__btn_bottom {
+    top: 5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
   /*Home*/
   #home {
