@@ -87,7 +87,7 @@ button {
   width: 100%;
   height: 820px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: var(--color-white);
   background: linear-gradient(45deg, var(--color-sky), var(--color-blue));
@@ -144,7 +144,7 @@ button {
 #talk {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 10rem;
 }
@@ -218,7 +218,7 @@ button {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .review__list {
   width: 300px;
@@ -275,10 +275,26 @@ button {
   display: flex;
 }
 .footer__ul {
-  margin-right: 2.5rem;
+  margin-left: 2.5rem;
 }
 .footer__ul li {
   margin-top: 1rem;
+}
+#footer__sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.snsul {
+  display: flex;
+  padding: 1rem 0;
+}
+.snsul li {
+  margin-right: 1rem;
+}
+.snsul li img {
+  width: 25px;
+  height: 25px;
 }
 /*Mobile*/
 @media all and (max-width: 768px) {
@@ -468,7 +484,7 @@ button {
     flex-direction: column;
   }
   .company p {
-    width: 400px;
+    width: auto;
     margin-top: 1rem;
   }
   .footer__list {
@@ -481,5 +497,8 @@ button {
   .footer__ul li {
     margin-top: 0.5rem;
     font-size: 12px;
+  }
+  .footer__ul:first-child {
+    margin-left: 0;
   }
 }
