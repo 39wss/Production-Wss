@@ -19,7 +19,6 @@
 
   /* Font weight */
   --weight-bold: 700;
-  --weight-semi-bold: 600;
   --weight-regular: 400;
 
   /*Annimation*/
@@ -31,6 +30,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  font-family: "Roboto", sans-serif;
 }
 a {
   text-decoration: none;
