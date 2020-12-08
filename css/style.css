@@ -321,26 +321,23 @@ button {
   }
   /*Navbar*/
   #navbar {
-    z-index: 1;
+    z-index: 2;
     padding: 25px 30px;
   }
-  #navbar.navbar--dark {
-    background: var(--color-white);
-    color: var(--color-black);
-  }
   #nav {
-    display: flex;
+    z-index: 1;
     position: absolute;
     flex-direction: column;
-    top: 0px;
+    top: 0;
     right: 0px;
     width: 50%;
     height: 100vh;
-    padding: 2rem 1rem;
+    padding: 6rem 1rem;
     background-color: var(--color-white);
     color: var(--color-black);
     transform: translateX(100%);
-    transition: all 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.096);
   }
   #nav.nav-active {
     transform: translateX(0%);
@@ -350,6 +347,7 @@ button {
   }
   #nav li {
     opacity: 0;
+    text-align: center;
     margin-bottom: 20px;
   }
   .toggle__btn {
@@ -379,13 +377,16 @@ button {
     top: 15px;
   }
   .toggleAnimation .toggle__btn_top {
+    top: 10px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+    background: var(--color-black);
   }
   .toggleAnimation .toggle__btn_bottom {
-    top: 5px;
+    top: 10px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    background: var(--color-black);
   }
   @keyframes navLinkFade {
     from {

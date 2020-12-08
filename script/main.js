@@ -20,14 +20,14 @@ document.addEventListener('scroll', () => {
 });
 
 // Navbar toggle button for small srceen
-const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtn = document.querySelector(".toggle__btn");
 const ul = document.querySelector("#nav");
 const li = document.querySelectorAll("#nav li");
 
 
 function toggleHandler() {
-    toggleBtn.classList.toggle('toggleAnimation');
-    ul.classList.toggle('nav-active');
+    toggleBtn.classList.toggle("toggleAnimation")
+    ul.classList.toggle("nav-active")
     
     li.forEach((link, index) => {
         console.log(link)
@@ -36,11 +36,11 @@ function toggleHandler() {
         } else {
             link.style.animation = "navLinkFade 0.5s ease forwards 0.4s";
         }
-    });
+    })
 }
 
 function init() {
-  toggleBtn.addEventListener("click", toggleHandler);
+    toggleBtn.addEventListener("click", toggleHandler);
 }
 
-// init();
+init();
