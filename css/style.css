@@ -244,7 +244,7 @@ button {
   text-align: center;
   background-color: rgb(56, 56, 56);
   color: var(--color-white);
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 #start p {
   margin: 1.5rem 0;
@@ -307,14 +307,6 @@ button {
     --font-micro: 8px;
   }
   /*Universal tags*/
-  h1 {
-    font-size: var(--font-large);
-    font-weight: var(--weight-regular);
-  }
-  h2 {
-    font-size: var(--font-medium);
-    font-weight: var(--weight-regular);
-  }
   .section {
     padding: 0px 40px;
     margin: auto;
