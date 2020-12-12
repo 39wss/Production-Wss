@@ -352,6 +352,75 @@ button {
       transform: translateX(0px);
     }
   }
+  /*Home*/
+  #home {
+    height: 400px;
+  }
+  .main__txt {
+    width: 300px;
+    margin-top: 7rem;
+  }
+  .main__txt p {
+    margin-top: 1rem;
+    font-size: var(--font-small);
+    line-height: 16px;
+  }
+  .main__img {
+    width: 240px;
+    height: auto;
+    top: 40%;
+  }
+  /*Opening inpo*/
+  #opening {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .open__title h2 {
+    text-align: center;
+  }
+  .open__list ul {
+    width: 90%;
+    margin: 2rem 1rem;
+  }
+  .open__list ul img {
+    width: 50px;
+  }
+  .txt__inpo {
+    width: 200px;
+  }
+  /*Inpo*/
+  #inpo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .inpo__txt button {
+    border: 0.5px solid var(--color-grey);
+    font-size: var(--font-small);
+  }
+  .inpo__img {
+    margin-top: 5rem;
+    width: 280px;
+    padding: 0;
+  }
+  /*Review*/
+  .review__txt p {
+    width: 350px;
+    line-height: 16px;
+  }
+  .review__imgs {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  .review__imgs img {
+    width: 50px;
+  }
   /*Start*/
   #start {
     padding: 5rem 30px;
