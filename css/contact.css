@@ -420,7 +420,8 @@ button {
     margin-top: 2rem;
   }
   .review__imgs img {
-    width: 50px;
+    width: 60px;
+    height: 60px;
     height: auto;
   }
   /*Start*/
