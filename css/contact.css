@@ -51,6 +51,9 @@ button {
   border: none;
   outline: none;
 }
+.hidden {
+  display: none;
+}
 .section {
   padding: 0px 200px;
   margin: auto;
@@ -127,13 +130,13 @@ button {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.open__list ul {
+.open__list li {
   width: 45%;
   display: flex;
   align-items: center;
   margin: 2.5rem 1rem;
 }
-.open__list ul img {
+.open__list li img {
   width: 60px;
   margin-right: 1rem;
 }
@@ -381,12 +384,12 @@ button {
   .open__title h2 {
     text-align: center;
   }
-  .open__list ul {
+  .open__list li {
     width: 90%;
     margin: 2rem 1rem;
     justify-content: center;
   }
-  .open__list ul img {
+  .open__list li img {
     width: 50px;
   }
   .txt__inpo {
