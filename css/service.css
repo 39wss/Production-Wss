@@ -51,6 +51,9 @@ button {
   outline: none;
   color: inherit;
 }
+.hidden {
+  display: none;
+}
 .section {
   padding: 0px 200px;
   margin: auto;
@@ -194,6 +197,7 @@ iframe {
   position: absolute;
   width: 100%;
   height: 100%;
+  border: none;
 }
 /*Gallery*/
 #gallery {
