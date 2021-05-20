@@ -52,6 +52,9 @@ button {
   border: none;
   outline: none;
 }
+.hidden {
+  display: none;
+}
 .section {
   padding: 0px 200px;
   margin: auto;
